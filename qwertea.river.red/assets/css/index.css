@@ -1,0 +1,7 @@
+@import url('global.css');
+
+input[type='text'].space,
+input[type='password'].space,
+input[type='email'].space {
+	margin-bottom: 10px;
+}

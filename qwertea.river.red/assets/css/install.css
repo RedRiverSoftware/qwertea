@@ -1,0 +1,36 @@
+@import url('global.css');
+
+body {
+	overflow: hidden;
+}
+
+body > div {
+	position: relative;
+}
+
+#radial {
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+}
+#radial.visible {
+	opacity: 1;
+}
+
+#logo {
+	cursor: pointer;
+}
+
+#tip {
+	position: fixed;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+}
+#tip.visible {
+	opacity: 0;
+}

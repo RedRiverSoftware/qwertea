@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^install$ /install/ [R,L]
+RewriteRule ^install/(.*) install.php?stage=$1 [L]
