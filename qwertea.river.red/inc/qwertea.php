@@ -23,6 +23,13 @@
 			$GLOBALS["Qwertea"] = $this;
 			
 			require("database.php");
+			
+			if ($this -> Database != false && $this -> Config -> RedirectErrors == true) {
+				$r = $this -> Database -> query("SHOW TABLES");
+				if ($r -> num_rows == 0) {
+					header("LOCATION: /install/");
+				}
+			}
 		}
 		
 	}

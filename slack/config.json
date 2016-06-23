@@ -1,9 +1,0 @@
-{
-	"token": "xoxb-53192437588-oc39QZSP9ggWLIv1IPKfmX6T",
-	"mysql": {
-		"username": "qwertea",
-		"password": "R)y>c5y=?;9'9NSH",
-		"database": "qwertea",
-		"socketPath": "/var/run/mysqld/mysqld.sock"
-	}
-}

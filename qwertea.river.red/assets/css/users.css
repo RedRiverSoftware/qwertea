@@ -1,0 +1,77 @@
+@import url('global.css');
+
+body {
+	color: #fff;
+}
+
+a {
+	border-bottom: 1px dotted #fff;
+}
+
+#container {
+	display: inline-block;
+	width: 480px;
+}
+
+#top {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #24C6DC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 5px 12px 0 rgba(2,2,2,.3);
+    width: 100%;
+    height: 183px;
+}
+
+#avatar {
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	box-shadow: 0 5px 12px 0 rgba(2,2,2,.3);
+	margin-bottom: 10px;
+}
+
+#name {
+	margin-bottom: 5px;
+}
+
+#bottom {
+	min-height: 350px;
+	background-color: #fff;
+	color: #000;
+}
+#bottom > #detailstable {
+	table-layout: fixed;
+	border-spacing: 0px;
+}
+#bottom > #detailstable > tbody tr > td {
+	width: 100%;
+	text-align: left;
+}
+#bottom > #detailstable > tbody tr > td:nth-child(2) {
+	text-align: right;
+}
+#bottom > #detailstable td {
+	padding: 10px;
+}
+
+@media only screen and (max-height: 593px) {
+	#bottom {
+		min-height: initial;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#container {
+		width: 100%;
+		height: 100%;
+	}
+	#bottom {
+		height: calc(100% - 243px);
+		overflow: auto;
+	}
+	body {
+		overflow: hidden;
+	}
+}

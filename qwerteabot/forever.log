@@ -1,0 +1,45 @@
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+info: ** Setting up custom handlers for processing Slack messages
+info: ** API CALL: https://slack.com/api/rtm.start
+notice: ** BOT ID: qwertea_bot ...attempting to connect to RTM!
+notice: RTM websocket opened
+info: ** API CALL: https://slack.com/api/channels.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+[ [ 'cat', 3 ],
+  [ 'help', 4 ],
+  [ 'joke', 4 ],
+  [ 'insult', 6 ],
+  [ 'avatar', 6 ],
+  [ 'mypoints', 8 ],
+  [ 'messageme', 9 ],
+  [ 'logincode', 9 ],
+  [ 'leaderboard', 11 ] ]
+[ [ 'cat', 3 ],
+  [ 'help', 4 ],
+  [ 'joke', 4 ],
+  [ 'insult', 6 ],
+  [ 'avatar', 6 ],
+  [ 'mypoints', 8 ],
+  [ 'messageme', 9 ],
+  [ 'logincode', 9 ],
+  [ 'leaderboard', 11 ] ]
+[ [ 'cat', 3 ],
+  [ 'help', 4 ],
+  [ 'joke', 4 ],
+  [ 'insult', 6 ],
+  [ 'avatar', 6 ],
+  [ 'mypoints', 8 ],
+  [ 'messageme', 9 ],
+  [ 'logincode', 9 ],
+  [ 'leaderboard', 11 ] ]
+info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/users.list
+error: Forever detected script was killed by signal: SIGKILL

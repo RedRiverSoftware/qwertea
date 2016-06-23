@@ -5,3 +5,8 @@ input[type='password'].space,
 input[type='email'].space {
 	margin-bottom: 10px;
 }
+
+#error {
+	margin-bottom: 30px;
+	color: #f00;
+}

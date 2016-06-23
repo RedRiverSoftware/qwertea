@@ -4,7 +4,7 @@
 		$this -> MySQL -> Host     = "localhost";
 		$this -> MySQL -> Database = "qwertea";
 		$this -> MySQL -> User     = "qwertea";
-		$this -> MySQL -> Password = null;
+		$this -> MySQL -> Password = "R)y>c5y=?;9'9NSH";
 		
 	}};
 ?>

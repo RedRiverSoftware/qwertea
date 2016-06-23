@@ -2,3 +2,9 @@ RewriteEngine on
 
 RewriteRule ^install$ /install/ [R,L]
 RewriteRule ^install/(.*) install.php?stage=$1 [L]
+
+RewriteRule ^users/(.+?)/ user.php?slackname=$1 [L]
+RewriteRule ^users/(.+) /users/$1/ [R,L]
+
+RewriteRule ^leaderboard/ leaderboard.php [L]
+RewriteRule ^leaderboard$ /leaderboard/ [R,L]
