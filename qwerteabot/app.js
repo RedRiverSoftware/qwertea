@@ -354,16 +354,16 @@ fs.readFile("config.json",function(err,Config) {
 									"description": "Displays a random cat.",
 									"function"   : function(mysql,bot,message,args) {
 										request("http://random.cat/meow", function(error, response, body) {
-												if (!error && response.statusCode == 200) {
-													var result = JSON.parse(body);
-												}
-											  var reply_with_attachments = {
+											if (!error && response.statusCode == 200) {
+												var result = JSON.parse(body);
+											}
+											var reply_with_attachments = {
+												'username': 'qwertea_bot',
 											    'text': result.file,
-												'icon_emoji': ':cat:'
-											    }
-												bot.reply(message, reply_with_attachments);
+												'icon_emoji': ':smiley_cat:'
+											}
+											bot.reply(message, reply_with_attachments);
 										})
-
 									},
 								},
 
@@ -371,11 +371,16 @@ fs.readFile("config.json",function(err,Config) {
 									"description": "Displays a random insult.",
 									"function"   : function(mysql,bot,message,args) {
 										request("http://quandyfactory.com/insult/json", function(error, response, body) {
-										  if (!error && response.statusCode == 200) {
-											var result = JSON.parse(body);
-											bot.reply(message, result.insult);
-										  }
-										});
+											if (!error && response.statusCode == 200) {
+												var result = JSON.parse(body);
+											}
+											var reply_with_attachments = {
+												'username': 'qwertea_bot',
+											    'text': result.insult,
+												'icon_emoji': ':smiley_cat:'
+											}
+											bot.reply(message, reply_with_attachments);
+										})
 									},
 								},
 
