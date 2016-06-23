@@ -28,15 +28,14 @@
 					$sql = "SELECT * FROM `users` ORDER BY `points` DESC";
 					$result = $db->query($sql);
 
-					f ($result->num_rows == 0) {
+					if ($result->num_rows > 0) {
 				     // output data of each row
-				     while($row = $result->fetch_assoc()) {
-				         echo "<br> Name: ". $row["first_name"]. "". $row["last_name"]. " " . $row["points"] . "<br>";
-				     }
+				    while($row = $result->fetch_assoc()) {
+				         echo "<br> Name: ". $row["first_name"]. "". $row["last_name"]. " " . $row["points"] . " " . $row["slackname"] . "<br>";
+				    }
 					} else {
 				     echo "Couldnt Get Leaderboard Data";
 					}
-
 				?>
 			</div>
 		<div>

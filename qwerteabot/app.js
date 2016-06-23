@@ -353,17 +353,16 @@ fs.readFile("config.json",function(err,Config) {
 								"cat": {
 									"description": "Displays a random cat.",
 									"function"   : function(mysql,bot,message,args) {
-										  var reply_with_attachments = {
-										    'text': request("http://random.cat/meow", function(error, response, body) {
-													  if (!error && response.statusCode == 200) {
+										  request("http://random.cat/meow", function(error, response, body) {
+													if (!error && response.statusCode == 200) {
 														var result = JSON.parse(body);
 													  }
-													}),
-											    'icon_url': 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/sign-check-icon.png'
+
+										  var reply_with_attachments = {
+										    'text': result.file,
+										    'icon_emoji': ':chart_with_upwards_trend:'
 										    }
-											bot.reply(message, reply_with_attachments);
-									},
-								},
+								}),
 
 								"insult": {
 									"description": "Displays a random insult.",
