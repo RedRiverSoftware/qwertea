@@ -357,12 +357,13 @@ fs.readFile("config.json",function(err,Config) {
 												if (!error && response.statusCode == 200) {
 													var result = JSON.parse(body);
 												}
+											  var reply_with_attachments = {
+											    'text': result.file,
+												'icon_emoji': ':cat:'
+											    }
+												bot.reply(message, reply_with_attachments);
 										})
-										  var reply_with_attachments = {
-										    'text': result.file,
-											'icon_emoji': ':cat:'
-										    }
-											bot.reply(message, reply_with_attachments);
+
 									},
 								},
 
