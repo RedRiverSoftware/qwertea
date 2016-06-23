@@ -31,7 +31,7 @@
 					if ($result->num_rows > 0) {
 				     // output data of each row
 				    while($row = $result->fetch_assoc()) {
-				         echo "<br> Name: ". $row["first_name"]. "". $row["last_name"]. " " . $row["points"] . " " . $row["slackname"] . "<br>";
+				         echo "<br> Name : ". $row["firstname"]. " ". $row["lastname"]. "</br> Points : " . $row["points"] . "</br> Slack Name : " . $row["slackname"] . "<br>";
 				    }
 					} else {
 				     echo "Couldnt Get Leaderboard Data";
