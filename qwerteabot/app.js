@@ -377,7 +377,7 @@ fs.readFile("config.json",function(err,Config) {
 											var reply_with_attachments = {
 												'username': 'qwertea_bot',
 											    'text': result.insult,
-												'icon_emoji': ':smiley_cat:'
+												'icon_emoji': ':middle_finger:'
 											}
 											bot.reply(message, reply_with_attachments);
 										})
@@ -408,12 +408,18 @@ fs.readFile("config.json",function(err,Config) {
 								"joke": {
 									"description": "Displays a random joke.",
 									"function"   : function(mysql,bot,message,args) {
+
 										request("http://tambal.azurewebsites.net/joke/random", function(error, response, body) {
-										  if (!error && response.statusCode == 200) {
-											var result = JSON.parse(body);
-											bot.reply(message, result.joke);
-										  }
-										});
+											if (!error && response.statusCode == 200) {
+												var result = JSON.parse(body);
+											}
+											var reply_with_attachments = {
+												'username': 'qwertea_bot',
+											    'text': result.joke,
+												'icon_emoji': ':laughing:'
+											}
+											bot.reply(message, reply_with_attachments);
+										})
 									},
 								},
 

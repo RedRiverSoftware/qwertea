@@ -23,7 +23,7 @@
 			<div id="top" class="qwertea center vertical horizontal">
 				<h1>Leaderboards</h1>
 			<div>
-			<div id="bottom">
+			<div id="detailstables">
 				<?php
 					$sql = "SELECT * FROM `users` ORDER BY `points` DESC";
 					$result = $db->query($sql);
@@ -31,7 +31,7 @@
 					if ($result->num_rows > 0) {
 				     // output data of each row
 				    while($row = $result->fetch_assoc()) {
-				         echo "<tr> Name : ". $row["firstname"]. " ". $row["lastname"]. "</tr><tr> Slack Name : " . $row["slackname"] . "</tr><tr> Points : " . $row["points"] . "</tr>";
+				         echo "<br> Name : ". $row["firstname"]. " ". $row["lastname"]. "</br> Slack Name : <a href="https://rrsoftware.slack.com/messages/@" . $row["slackname"] . "</a></br> Points : " . $row["points"] . "<br>";
 				    }
 					} else {
 				     echo "Couldnt Get Leaderboard Data";
