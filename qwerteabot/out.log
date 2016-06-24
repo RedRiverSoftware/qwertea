@@ -6,39 +6,32 @@ notice: RTM websocket opened
 info: ** API CALL: https://slack.com/api/channels.list
 info: ** API CALL: https://slack.com/api/users.list
 info: ** API CALL: https://slack.com/api/users.list
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+info: ** API CALL: https://slack.com/api/chat.postMessage
 info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/chat.postMessage
+info: ** API CALL: https://slack.com/api/chat.postMessage
+info: ** API CALL: https://slack.com/api/chat.postMessage
 info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/chat.postMessage
+OkPacket {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  serverStatus: 2,
+  warningCount: 0,
+  message: '',
+  protocol41: true,
+  changedRows: 0 }
+info: ** API CALL: https://slack.com/api/chat.postMessage
 info: ** API CALL: https://slack.com/api/users.list
-info: ** API CALL: https://slack.com/api/users.list
-info: ** API CALL: https://slack.com/api/users.list
-info: ** API CALL: https://slack.com/api/users.list
-info: ** API CALL: https://slack.com/api/users.list
-[ [ 'cat', 3 ],
-  [ 'help', 4 ],
-  [ 'joke', 4 ],
-  [ 'insult', 6 ],
-  [ 'avatar', 6 ],
-  [ 'mypoints', 8 ],
-  [ 'messageme', 9 ],
-  [ 'logincode', 9 ],
-  [ 'leaderboard', 11 ] ]
-[ [ 'cat', 3 ],
-  [ 'help', 4 ],
-  [ 'joke', 4 ],
-  [ 'insult', 6 ],
-  [ 'avatar', 6 ],
-  [ 'mypoints', 8 ],
-  [ 'messageme', 9 ],
-  [ 'logincode', 9 ],
-  [ 'leaderboard', 11 ] ]
-[ [ 'cat', 3 ],
-  [ 'help', 4 ],
-  [ 'joke', 4 ],
-  [ 'insult', 6 ],
-  [ 'avatar', 6 ],
-  [ 'mypoints', 8 ],
-  [ 'messageme', 9 ],
-  [ 'logincode', 9 ],
-  [ 'leaderboard', 11 ] ]
-info: ** API CALL: https://slack.com/api/users.list
-info: ** API CALL: https://slack.com/api/users.list
+info: ** API CALL: https://slack.com/api/chat.postMessage
+info: ** API CALL: https://slack.com/api/chat.postMessage

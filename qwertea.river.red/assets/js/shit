@@ -1,0 +1,136 @@
+	/*	MySQL_Connection.query("SELECT 1 FROM `stringvars` WHERE `key_`='tearound'",function(err,rows) {
+													if (err) {throw err;}
+													if (rows.length == 0) {
+														var message_with_attachments = {
+															"username": bot.identity.name,
+															"text": "You can't join a tea round when there isn't even one going on! (Type `help` for more info)",
+															"icon_emoji": ":x:"
+														};
+														bot.reply(message,message_with_attachments);
+													} else {
+												getLoginCode(MySQL_Connection,users_ids[message.user].name,users_ids[message.user].profile.email,message.user,function(logincode) {
+												}*/
+
+
+
+				/*								MySQL_Connection.query("SELECT 1 FROM `stringvars` WHERE `key_`='tearound'",function(err,rows) {
+													if (err) {throw err;}
+													if (rows.length == 0) {
+														var message_with_attachments = {
+															"username": bot.identity.name,
+															"text": "You can't join a tea round when there isn't even one going on! (Type `help` for more info)",
+															"icon_emoji": ":x:"
+														};
+														bot.reply(message,message_with_attachments);
+													} else {
+														MySQL_Connection.query("SELECT * FROM `products` ORDER BY CHAR_LENGTH(`name`)",function(err,products) {
+															if (err) {throw err;}
+
+															var nproducts = {};
+															for(var i=0;i < products.length;i++) {
+																nproducts[products[i].name] = products[i];
+																delete(nproducts[products[i].name].name);
+															}
+															products = nproducts;
+															nproducts = undefined;
+
+															bot.startConversation(message,function(err,conversation) {
+																if (err) {throw err;}
+																var lengths = [];
+																var say = [];
+																for (var name in products) {
+																	lengths.push([name,name.length]);
+																}
+																lengths.sort(function(a,b) {
+																	return a[1] - b[1];
+																});
+																lengths = lengths.reverse();
+																for(var i=0;i < lengths.length;i++) {
+																	if (products[lengths[i][0]].price == 1) {
+																		say.push(i + (" ").repeat(i.toString().length - lengths.length.toString().length) + ": " + lengths[i][0] + (" ").repeat(lengths[0][0].length - lengths[i][0].length) + ": 1 Point");
+																	} else {
+																		say.push(i + (" ").repeat(i.toString().length - lengths.length.toString().length) + ": " + lengths[i][0] + (" ").repeat(lengths[0][0].length - lengths[i][0].length) + ": " + products[lengths[i][0]].price + " Points");
+																	}
+																}
+
+																function placeorder() {
+
+																}
+
+																function order_callback_2() {
+
+																}
+
+																function order_callback_1(lengths,reply) {
+																	if (!isNaN(reply.text)) {
+																		reply.text = Number(reply.text);
+																		if (lengths[reply.text]) {
+
+																			var productid   = reply.text;
+																			var productname = lengths[reply.text][0];
+																			var productobj  = products[productname];
+																			var orders = [];
+
+																			if (productobj.extras != null) {
+
+																				var lengths = [];
+																				var say = [];
+																				for(var extra_name in productobj.extras) {
+																					lengths.push([extra_name,extra_name.length]);
+																				}
+																				lengths.sort(function(a,b) {
+																					return a[1] - b[1];
+																				});
+																				lengths = lengths.reverse();
+																				for(i=0;i < lengths.length;i++) {
+
+																					//console.log(productobj.extras[i]);
+																				}
+
+																			} else {
+																				placeorder(reply,productid);
+																			}
+
+																		} else {
+																			conversation.ask({
+
+																				"username"  : bot.identity.name,
+																				"text"      : "Invalid product! Please try again or type `cancel`.",
+																				"icon_emoji": ":no_entry_sign:",
+
+																			},function(r) {
+																				return order_callback_1(lengths,r);
+																			});
+																		}
+																	} else if (reply.text == "cancel") {
+																		conversation.say("You're no longer ordering anything.");
+																	} else {
+																		conversation.ask({
+
+																			"username"  : bot.identity.name,
+																			"text"      : "That wasn't a number! Please try again or type `cancel`.",
+																			"icon_emoji": ":no_entry_sign:",
+
+																		},function(r) {
+																			return order_callback_1(lengths,r);
+																		});
+																	}
+																}
+																getLoginCode(MySQL_Connection,users_ids[message.user].name,users_ids[message.user].profile.email,message.user,function(logincode) {
+																conversation.ask({
+
+																	"username"  : bot.identity.name,
+																	"text"      : "To place an order, visit <http://qwertea.river.red/shop/|the order page>\nFrom there, you will be instructed on how to place your order\nRemember to make sure that you are logged in!\nIf you aren't already logged in, <" + Config.url + "?l=" + logincode + "|click here> and then re-open the <http://qwertea.river.red/shop/|order page>",
+																	"icon_emoji": ":information_source:"
+
+																},function(r) {
+																	return order_callback_1(lengths,r);
+																});
+																});
+															});
+
+														});
+													}
+												});
+											},
+										},*/

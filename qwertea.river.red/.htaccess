@@ -8,3 +8,9 @@ RewriteRule ^users/(.+) /users/$1/ [R,L]
 
 RewriteRule ^leaderboard/ leaderboard.php [L]
 RewriteRule ^leaderboard$ /leaderboard/ [R,L]
+
+RewriteRule ^shop/ shop.php [L]
+RewriteRule ^shop$ /shop/ [R,L]
+
+RewriteRule ^incompatible/ 'error.php?type=Incompatible Browser&details=You have JavaScript disabled on your browser. Please enable JavaScript.' [L]
+RewriteRule ^incompatible /incompatible/ [R,L]

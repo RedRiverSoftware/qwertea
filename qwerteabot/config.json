@@ -1,5 +1,6 @@
 {
 	"url"  : "http://qwertea.river.red/",
+	"ClockworkAPIKey": "7f3e700c7895c07b551d34bf34a736be170943e6",
 	"token": "xoxb-53192437588-oc39QZSP9ggWLIv1IPKfmX6T",
 	"mysql": {
 		"username"  : "qwertea",

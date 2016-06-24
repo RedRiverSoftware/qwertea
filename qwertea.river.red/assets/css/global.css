@@ -1,4 +1,4 @@
-@import('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body,html {
 	width: 100%;
@@ -9,7 +9,27 @@ body,html {
 body {
 	background-color: #fff;
 	font-family: 'Roboto', sans-serif;
-	color: #555;
+	color: #000;
+}
+
+.shrink {
+	white-space: nowrap;
+}
+
+.code {
+	font-size: .72rem;
+	line-height: .72rem;
+	white-space: normal;
+	color: #c25;
+	padding: 1px 3px;
+	-webkit-font-variant-ligatures: none;
+	font-variant-ligatures: none;
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 a {
@@ -53,7 +73,7 @@ h1,h2,h3,h4,h5,h6 {
 input[type='text'],
 input[type='password'],
 input[type='email'] {
-	
+
 	display: inline-block;
 	-webkit-appearance: none !important;
 	-moz-appearance: none !important;
@@ -64,7 +84,7 @@ input[type='email'] {
 	outline: 0;
 	padding: 7.5px;
 	font-family: 'Roboto', sans-serif;
-	
+
 }
 
 .button {
@@ -82,6 +102,12 @@ input[type='email'] {
 	-moz-transition: background-color 0.5s;
 	font-size: 12px;
 	outline: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .button.green {
 	background-color: #148544;
@@ -92,6 +118,26 @@ input[type='email'] {
 }
 .button.green:active {
 	background-color: #0E7138;
+}
+
+.button.blue:hover {
+	background-color: rgba(26, 152, 156,1.0);
+	color: #fff;
+}
+.button.blue {
+	background-color: rgba(26, 188, 156,1.0);
+}
+.button.blue:active {
+	background-color: rgba(26, 280, 156,1.0);
+}
+
+.button.disabled {
+	background-color: #868686;
+	color: #fff;
+}
+
+.spacer {
+	height: 10px;
 }
 
 #radial {

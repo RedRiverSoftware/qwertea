@@ -1,11 +1,8 @@
 <?php
-	require("config.php");
-	$QwerteaConfig = new QwerteaConfig();
-	
 	class Database {
-		
+
 		public $db;
-		
+
 		public function query($q,$e = null) {
 			$qe = $this -> db -> query($q);
 			if (!$qe) {
@@ -17,22 +14,22 @@
 			}
 			return $qe;
 		}
-		
+
 		public function escape($s) {
 			return $this -> db -> real_escape_string($s);
 		}
-		
+
 	}
-	
+
 	$db = @new mysqli(
-		
-		$QwerteaConfig -> MySQL -> Host,
-		$QwerteaConfig -> MySQL -> User,
-		$QwerteaConfig -> MySQL -> Password,
-		$QwerteaConfig -> MySQL -> Database
-		
+
+		$GLOBALS["Qwertea"] -> ConfigFile -> MySQL -> Host,
+		$GLOBALS["Qwertea"] -> ConfigFile -> MySQL -> User,
+		$GLOBALS["Qwertea"] -> ConfigFile -> MySQL -> Password,
+		$GLOBALS["Qwertea"] -> ConfigFile -> MySQL -> Database
+
 	);
-	
+
 	if ($db -> connect_error) {
 		$GLOBALS["Qwertea"] -> Database = false;
 		if ($GLOBALS["Qwertea"] -> Config -> RedirectErrors == true) {
