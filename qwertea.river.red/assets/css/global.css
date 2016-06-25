@@ -87,6 +87,10 @@ input[type='email'] {
 
 }
 
+input[type='checkbox'] {
+	vertical-align: text-bottom;
+}
+
 .button {
 	display: inline-block;
 	-webkit-appearance: none !important;
@@ -108,6 +112,7 @@ input[type='email'] {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	text-align: center;
 }
 .button.green {
 	background-color: #148544;

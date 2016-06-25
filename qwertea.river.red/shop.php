@@ -119,6 +119,17 @@
 	<body>
 <?php 	if (!isset($_GET["expired"])) { ?>
 
+			<div class="qwertea center horizontal vertical full visible" id="modalcontainer"><div>
+				<div id="modal">
+
+					<label><input id="guestordermodal" type="checkbox"/> Guest Order</label>
+					<div class="underline">Extras</div>
+					<div id="extrascontainer"></div>
+					<div class="button green" id="savemodalbutton">Save</div>
+
+				</div>
+			</div></div>
+
 			<div class="qwertea center horizontal vertical full"><div>
 
 				<div id="whitebox" class="animated fadeIn">

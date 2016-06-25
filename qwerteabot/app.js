@@ -669,7 +669,7 @@ fs.readFile("config.json",function(err,Config) {
 																	if ((longestpoints - 6) < 1) {
 																		gen += " Points |";
 																	} else {
-																		gen += " Points" + (" ").repeat(longestpoints - 6) + " |";
+																		gen += " Points" + (" ").repeat(longestpoints - 6 + 1) + " |";
 																	}
 
 																	gen += "\n" + ("=").repeat(2 + 4 + n3 + 3 + 6 + n4 + 2);

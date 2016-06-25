@@ -126,6 +126,36 @@ body {
 	height: 10px;
 }
 
+#modalcontainer {
+	display: none !important;
+	position: fixed;
+	z-index: 999;
+	transition: background-color 1s;
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+}
+#modalcontainer.visible {
+	display: table !important;
+	background-color: rgba(0,0,0,.5);
+}
+#modal {
+	border: 1px solid #d6d4d4;
+	width: 300px;
+	height: 180px;
+	background-color: #fbfbfb;
+	display: inline-block;
+	text-align: left;
+	padding: 15px;
+	font-size: 14px;
+}
+#modal > .button {
+	width: 100px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
 @media (max-width: 991px) {
 	.product {
 		height: 131px;

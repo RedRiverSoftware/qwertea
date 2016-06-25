@@ -1,4 +1,5 @@
 var cart = [];
+var extras_json = [];
 var products_in_cart = {};
 var products_data;
 
@@ -11,8 +12,7 @@ function removeb(thisb) {
 	delete(products_in_cart[product]);
 	cart = [];
 	$.each(products_in_cart,function(i,v) {
-		console.log(i,v);
-		for(var x=0;x < i;x++) {
+		for(var x=0;x < v;x++) {
 			cart.push(i);
 		}
 	});
@@ -143,7 +143,7 @@ function update_cart_text() {
 		$("#hastotal").html("");
 		$("#edittip").html("");
 		$("#total").html("");
-		$("#checkout").removeClass("disabled");
+		$("#checkout").addClass("disabled");
 	} else {
 		products_in_cart = {};
 		for(var i=0;i < cart.length;i++) {
@@ -166,7 +166,10 @@ function update_cart_text() {
 
 		var gen = "";
 		for(i=0;i < sorting.length;i++) {
-			gen += "<div class='p'><div class='l' data-product='" + sorting[i][0] + "'>" + sorting[i][0] + " x" + products_in_cart[sorting[i][0]] + "</div><div class='r'><img class='editb' src='/assets/img/edit.png'/>&nbsp;&nbsp;<img class='removeb' onclick='removeb(this)' src='/assets/img/cancel.png'/></div></div><br>";
+			if (products_data.products[sorting[i][0]].extras) {
+				extras_json[sorting[i][0]] = products_data.products[sorting[i][0]].extras;
+			}
+			gen += "<div class='p'><div class='l' data-amount='" + products_in_cart[sorting[i][0]] + "' data-guestamount='0' data-product='" + sorting[i][0] + "'>" + sorting[i][0] + " x" + products_in_cart[sorting[i][0]] + "</div><div class='r'><img class='editb' src='/assets/img/edit.png'/>&nbsp;&nbsp;<img class='removeb' onclick='removeb(this)' src='/assets/img/cancel.png'/></div></div><br>";
 		}
 		$("#cart_text").html(gen.replace(/\n$/,""));
 
@@ -207,12 +210,19 @@ $("#checkout").click(function() {
 		return;
 	}
 
+
 	var order = {};
 	$.each(products_in_cart,function(k,v) {
+		var elem;
+		$(".l").each(function() {
+			if ($(this).data("product") == k) {
+				elem = this;
+			}
+		});
 		order[k] = {
 			"amount": v,
-			"extras": extras,
-			"guestorders": $(".guestorders[data-name='" + k + "']").val() || 0,
+			"extras": extras_json[k] || null,
+			"guestorders": Number($(elem).data("guestamount")),
 		};
 	});
 
@@ -226,3 +236,6 @@ $("#checkout").click(function() {
 	});
 });
 
+$("#modal > .button").click(function() {
+
+});
